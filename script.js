@@ -6,7 +6,7 @@ fetch("https://exquisite-pastelito-9d4dd1.netlify.app/golfapi/course11819.json")
 
 function onSubmit(){
     let tee = 0;
-    $("#tee-form").children("input").each((index, element) => {
+    $("#tee-form").find("input").each((index, element) => {
         if ($(element).is(':checked')){
             tee = index
         }

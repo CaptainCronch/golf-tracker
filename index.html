@@ -10,58 +10,72 @@
 </head>
 <body>
     <form id="tee-form">
-        <input type="radio" name="Tees" id="pro" value="Professional">
-        <label for="pro">Professional</label>
-        <input type="radio" name="Tees" id="champ" value="Champion">
-        <label for="champ">Champion</label>
-        <input type="radio" name="Tees" id="men" value="Men">
-        <label for="men">Men</label>
-        <input type="radio" name="Tees" id="women" value="Women">
-        <label for="women">Women</label>
-        <input type="button" value="Submit" onclick="onSubmit();return false">
+        <div class="tee-radio">
+            <input type="radio" name="Tees" id="pro" value="Professional">
+            <label for="pro">Professional</label>
+        </div>
+        <div class="tee-radio">
+            <input type="radio" name="Tees" id="champ" value="Champion">
+            <label for="champ">Champion</label>
+        </div>
+        <div class="tee-radio">
+            <input type="radio" name="Tees" id="men" value="Men">
+            <label for="men">Men</label>
+        </div>
+        <div class="tee-radio">
+            <input type="radio" name="Tees" id="women" value="Women">
+            <label for="women">Women</label>
+        </div>
+        <input type="button" id="submit-button" value="Submit" onclick="onSubmit();return false">
     </form>
-    <table class="hidden">
-        <colgroup>
-            <col>
-        </colgroup>
-        <thead>
-            <tr id="holes">
-                <th>Holes</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>In</th>
-                <th>10</th>
-                <th>11</th>
-                <th>12</th>
-                <th>13</th>
-                <th>14</th>
-                <th>15</th>
-                <th>16</th>
-                <th>17</th>
-                <th>18</th>
-                <th>Out</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr id="yardage">
-                <td>Yardage</td>
-            </tr>
-            <tr id="par">
-                <td>Par</td>
-            </tr>
-            <tr id="handicap">
-                <td>Handicap</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table class="hidden">
+            <colgroup>
+                <col class="titles">
+                <col span="9">
+                <col class="totals">
+                <col span="9">
+                <col span="2" class="totals">
+            </colgroup>
+            <thead>
+                <tr id="holes">
+                    <th>Holes</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>In</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>13</th>
+                    <th>14</th>
+                    <th>15</th>
+                    <th>16</th>
+                    <th>17</th>
+                    <th>18</th>
+                    <th>Out</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="yardage">
+                    <td>Yardage</td>
+                </tr>
+                <tr id="par">
+                    <td>Par</td>
+                </tr>
+                <tr id="handicap">
+                    <td>Handicap</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <input class="hidden" id="new-player" type="button" value="New Player" onclick="newPlayer(); return false">
     <h2 class="hidden" id="nan-warning">Your score needs to be all whole numbers...</h2>
 </body>
